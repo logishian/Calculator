@@ -28,7 +28,8 @@ function App() {
 
   function calculate() {
     setPrev(value);
-    setValue(eval(value));
+    let total = eval(value);
+    setValue(String(total).includes('.') ? total.toFixed(9) : total);
   }
 
 
